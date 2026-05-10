@@ -7,7 +7,7 @@ import numpy as np
 
 st.set_page_config(
     page_title="CIS Touren-Dashboard",
-    page_icon="🚚",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -147,7 +147,7 @@ def format_delay(minutes):
 # ── SIDEBAR ───────────────────────────────────────────────────────────────────
 
 with st.sidebar:
-    st.markdown("## 🚚 CIS Dashboard")
+    st.markdown("## CIS Dashboard")
     st.markdown("---")
     
     uploaded_file = st.file_uploader(
@@ -271,16 +271,16 @@ n_tours = df['tournr'].nunique() if 'tournr' in df.columns else 0
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    st.metric("📦 Stationen gesamt", f"{total_stops:,}")
+    st.metric("Stationen gesamt", f"{total_stops:,}")
 with col2:
-    st.metric("🗺️ Touren", f"{n_tours:,}")
+    st.metric("Touren", f"{n_tours:,}")
 with col3:
     delta_color = "normal" if pct_ontime >= 80 else "inverse"
-    st.metric("✅ Pünktlichkeitsrate", f"{pct_ontime:.1f}%", f"{n_ontime} pünktlich")
+    st.metric("Pünktlichkeitsrate", f"{pct_ontime:.1f}%", f"{n_ontime} pünktlich")
 with col4:
-    st.metric("⚠️ Verspätungen", f"{n_delayed:,}", f"{n_delayed/total_stops*100:.1f}%" if total_stops > 0 else "")
+    st.metric("Verspätungen", f"{n_delayed:,}", f"{n_delayed/total_stops*100:.1f}%" if total_stops > 0 else "")
 with col5:
-    st.metric("⏱️ Ø Verspätung", f"{avg_delay:.0f} Min", f"Max: {max_delay:.0f} Min")
+    st.metric("Ø Verspätung", f"{avg_delay:.0f} Min", f"Max: {max_delay:.0f} Min")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
@@ -288,11 +288,11 @@ st.markdown("<br>", unsafe_allow_html=True)
 # ── TABS ──────────────────────────────────────────────────────────────────────
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-    "📊 Übersicht",
-    "🗓️ Zeitverlauf",
-    "📍 Kunden & Stationen",
-    "🗺️ Tourverlauf",
-    "📋 Rohdaten"
+    "Übersicht",
+    "Zeitverlauf",
+    "Kunden & Stationen",
+    "Tourverlauf",
+    "Rohdaten"
 ])
 
 

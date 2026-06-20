@@ -9,11 +9,18 @@ Application Project Master Data Science HAW Kiel SoSe26
 
 # Notebook Übersicht:
 
-Cleaning_EMR_CIS:	-Cleaning EMR Daten, Cleaning CIS Daten, Zuordnung der Tournummern zu EMR Daten, Analyse reine EMR Daten, Analyse Sinnhaftigkeit reine CIS Daten 
+Cleaning_EMR_CIS.ipynb:	-Cleaning EMR Daten, Cleaning CIS Daten, Zuordnung der Tournummern zu EMR Daten, Analyse reine EMR Daten, Analyse Sinnhaftigkeit reine CIS Daten (Miri, ab Pivotisierung Julia)
 
-Analyse_Standzeiten: -Standzeitenanalyse mit Geofence
+#### Miri
+Analyse_Standzeiten.ipynb: -Standzeitenanalyse mit Geofence
 
-analyse_fahrerverhalten: -Standzeitenanalyse auf Basis der pivotisierten EMR Daten, misst Klickverhalten der Fahrer in App
+analyse_fahrerverhalten.ipynb: -Standzeitenanalyse auf Basis der pivotisierten EMR Daten, misst Klickverhalten der Fahrer in App
 
-Standzeiten_Soll_Ist: -Visualisierungen der Standzeiten 
+Standzeiten_Soll_Ist.ipynb: -Visualisierungen der Standzeiten 
 
+#### Julia
+analyse_routenabweichung_stopabdeckung.ipynb: -Routenabweichung, Stoppabdeckung, Cleaning PRC und Tournummernzuordnung PRC
+
+tourenkarte_soll_emr_alle.ipynb: -Karte EMR vs. Soll, HTML Export war zu groß zum Hochladen 
+
+tourenkarte_soll_prc.ipynb: -Karte PRC vs. Soll, HTML Export war zu groß zum Hochladen 

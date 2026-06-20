@@ -19,6 +19,7 @@ analyse_fahrerverhalten.ipynb: -Standzeitenanalyse auf Basis der pivotisierten E
 Standzeiten_Soll_Ist.ipynb: -Visualisierungen der Standzeiten 
 
 #### Julia
+analyze_CIS.ipynb: -Erste Erschließung der CIS-Daten.xlsx (Soll-Daten)
 analyse_routenabweichung_stopabdeckung.ipynb: -Routenabweichung, Stoppabdeckung, Cleaning PRC und Tournummernzuordnung PRC
 
 tourenkarte_soll_emr_alle.ipynb: -Karte EMR vs. Soll, HTML Export war zu groß zum Hochladen 

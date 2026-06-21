@@ -1,0 +1,521 @@
+<CisSpedionModelConverterContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PlaceTimestampFrom>Station</PlaceTimestampFrom>
+	<SpecialPlaceTimestampFrom>
+		<Default>Station</Default>
+		<Conditions />
+	</SpecialPlaceTimestampFrom>
+	<AttachmentConfiguration>
+		<IsActive>true</IsActive>
+		<ImagesFromVehicleDirectory>E:\SPEDION\SimpexClient\images</ImagesFromVehicleDirectory>
+		<ImagesFromVehicleBackupDirectory>E:\SPEDION\SimpexClient\backup/images</ImagesFromVehicleBackupDirectory>
+		<CleanupBackupDirectory>true</CleanupBackupDirectory>
+		<UrlBasedAttachmentUser>SimpexWSHTSCargoCIS</UrlBasedAttachmentUser>
+		<UrlBasedAttachmentPassword>###PRIVACY###</UrlBasedAttachmentPassword>
+		<FormNumberBlackList />
+		<FormNumberWhiteList>
+			<int>7000</int>
+			<int>7001</int>
+			<int>7005</int>
+			<int>7002</int>
+			<int>7006</int>
+			<int>7009</int>
+			<int>7020</int>
+		</FormNumberWhiteList>
+		<AttachmentIsMandatory>false</AttachmentIsMandatory>
+		<LogDownloadHeaders>false</LogDownloadHeaders>
+	</AttachmentConfiguration>
+	<MessageFormatters>
+		<AbstractFormatter xsi:type="FreitextFormatter" />
+		<AbstractFormatter xsi:type="FreitextbestaetigungFormatter" />
+		<AbstractFormatter xsi:type="PositionsabfrageBestaetigungFormatter" />
+		<AbstractFormatter xsi:type="PositionFormatter">
+			<Forms>
+				<int>1615</int>
+				<int>1616</int>
+				<int>1621</int>
+				<int>1640</int>
+			</Forms>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="SendposstatusFormatter">
+			<Form>1340</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<RequiredAdditionalValue Equality="IsEqual" />
+			<RequiredTextAttachments />
+			<StatusText>Lademengen</StatusText>
+			<Status>11</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<UseDifferentWeightLoadUnloadName>false</UseDifferentWeightLoadUnloadName>
+			<DeliverAttachmentObjects>false</DeliverAttachmentObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="SendposstatusFormatter">
+			<Form>1340</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<RequiredAdditionalValue Equality="IsEqual" />
+			<RequiredTextAttachments />
+			<StatusText>Entlademengen</StatusText>
+			<Status>12</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<UseDifferentWeightLoadUnloadName>false</UseDifferentWeightLoadUnloadName>
+			<DeliverAttachmentObjects>false</DeliverAttachmentObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="SendposstatusFormatter">
+			<Form>7000</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<RequiredAdditionalValue Equality="IsEqual" />
+			<RequiredTextAttachments />
+			<StatusText />
+			<Status>11</Status>
+			<StatusFromAttachmentName />
+			<StatusWerte>
+				<StatusWerteConfig>
+					<Key>Tournummer</Key>
+					<SpedionType>Attachment</SpedionType>
+					<CisType>1</CisType>
+				</StatusWerteConfig>
+			</StatusWerte>
+			<MapAttachments>false</MapAttachments>
+			<UseDifferentWeightLoadUnloadName>false</UseDifferentWeightLoadUnloadName>
+			<DeliverAttachmentObjects>false</DeliverAttachmentObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="SendposstatusFormatter">
+			<Form>7000</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<RequiredAdditionalValue Equality="IsEqual" />
+			<RequiredTextAttachments />
+			<StatusText />
+			<Status>12</Status>
+			<StatusFromAttachmentName />
+			<StatusWerte>
+				<StatusWerteConfig>
+					<Key>Tournummer</Key>
+					<SpedionType>Attachment</SpedionType>
+					<CisType>1</CisType>
+				</StatusWerteConfig>
+			</StatusWerte>
+			<MapAttachments>false</MapAttachments>
+			<UseDifferentWeightLoadUnloadName>false</UseDifferentWeightLoadUnloadName>
+			<DeliverAttachmentObjects>false</DeliverAttachmentObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="SendposstatusFormatter">
+			<Form>7009</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<RequiredAdditionalValue Equality="IsEqual" />
+			<RequiredTextAttachments />
+			<StatusText />
+			<Status>11</Status>
+			<StatusFromAttachmentName />
+			<StatusWerte>
+				<StatusWerteConfig>
+					<Key>Beladenummer</Key>
+					<SpedionType>Attachment</SpedionType>
+					<CisType>1</CisType>
+				</StatusWerteConfig>
+				<StatusWerteConfig>
+					<Key>Palettenummer</Key>
+					<SpedionType>Attachment</SpedionType>
+					<CisType>1</CisType>
+				</StatusWerteConfig>
+			</StatusWerte>
+			<MapAttachments>false</MapAttachments>
+			<UseDifferentWeightLoadUnloadName>false</UseDifferentWeightLoadUnloadName>
+			<DeliverAttachmentObjects>false</DeliverAttachmentObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="SendposstatusFormatter">
+			<Form>7009</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<RequiredAdditionalValue Equality="IsEqual" />
+			<RequiredTextAttachments />
+			<StatusText>Workflow</StatusText>
+			<Status>12</Status>
+			<StatusFromAttachmentName />
+			<StatusWerte>
+				<StatusWerteConfig>
+					<Key>Beladenummer</Key>
+					<SpedionType>Attachment</SpedionType>
+					<CisType>1</CisType>
+				</StatusWerteConfig>
+				<StatusWerteConfig>
+					<Key>Palettenummer</Key>
+					<SpedionType>Attachment</SpedionType>
+					<CisType>1</CisType>
+				</StatusWerteConfig>
+			</StatusWerte>
+			<MapAttachments>false</MapAttachments>
+			<UseDifferentWeightLoadUnloadName>false</UseDifferentWeightLoadUnloadName>
+			<DeliverAttachmentObjects>false</DeliverAttachmentObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="SendposstatusFormatter">
+			<Form>7013</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<RequiredAdditionalValue Equality="IsEqual" />
+			<RequiredTextAttachments />
+			<StatusText />
+			<Status>11</Status>
+			<StatusFromAttachmentName />
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<UseDifferentWeightLoadUnloadName>false</UseDifferentWeightLoadUnloadName>
+			<DeliverAttachmentObjects>true</DeliverAttachmentObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>7020</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<StatusText>Palettenschein</StatusText>
+			<Status>14</Status>
+			<StatusWerte>
+				<StatusWerteConfig>
+					<Key>Bild</Key>
+					<SpedionType>Attachment</SpedionType>
+					<CisType>2</CisType>
+				</StatusWerteConfig>
+			</StatusWerte>
+			<MapAttachments>true</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1336</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<StatusText>Beladestelle abgelehnt</StatusText>
+			<Status>3</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1336</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<StatusText>Entladestelle abgelehnt</StatusText>
+			<Status>3</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1336</Form>
+			<RequiredOrderType>PerformAction</RequiredOrderType>
+			<StatusText>Aufgabe abgelehnt</StatusText>
+			<Status>3</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1337</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<StatusText>Entladestelle angenommen</StatusText>
+			<Status>11</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1337</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<StatusText>Beladestelle angenommen</StatusText>
+			<Status>11</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1337</Form>
+			<RequiredOrderType>PerformAction</RequiredOrderType>
+			<StatusText>Aufgabe angenommen</StatusText>
+			<Status>11</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1338</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<StatusText>Ankunft Beladestelle</StatusText>
+			<Status>12</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1338</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<StatusText>Ankunft Entladestelle</StatusText>
+			<Status>12</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1338</Form>
+			<RequiredOrderType>PerformAction</RequiredOrderType>
+			<StatusText>Ankunft Aufgabe</StatusText>
+			<Status>12</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1339</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<StatusText>Beginn Beladestelle</StatusText>
+			<Status>13</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1339</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<StatusText>Beginn Entladestelle</StatusText>
+			<Status>13</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1339</Form>
+			<RequiredOrderType>PerformAction</RequiredOrderType>
+			<StatusText>Beginn Aufgabe</StatusText>
+			<Status>13</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1340</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<StatusText>Ende Beladestelle (abgeholt)</StatusText>
+			<Status>14</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1340</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<StatusText>Ende Entladestelle (zugestellt)</StatusText>
+			<Status>14</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1340</Form>
+			<RequiredOrderType>PerformAction</RequiredOrderType>
+			<StatusText>Ende Aufgabe</StatusText>
+			<Status>14</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1341</Form>
+			<RequiredOrderType>Load</RequiredOrderType>
+			<StatusText>Abfahrt erledigt (Beladestelle)</StatusText>
+			<Status>15</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1341</Form>
+			<RequiredOrderType>Unload</RequiredOrderType>
+			<StatusText>Abfahrt erledigt (Entladestelle)</StatusText>
+			<Status>15</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>1341</Form>
+			<RequiredOrderType>PerformAction</RequiredOrderType>
+			<StatusText>Abfahrt erledigt (Aufgabe)</StatusText>
+			<Status>15</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>false</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>8109</Form>
+			<RequiredOrderType xsi:nil="true" />
+			<StatusText>ETA Info Ankunftszeit</StatusText>
+			<Status>43</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>true</MapEtaData>
+			<EtaAddDartCalculatedDelay>false</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="StationsstatusFormatter">
+			<Form>8109</Form>
+			<RequiredOrderType xsi:nil="true" />
+			<StatusText>ETA Info Ankunftszeit mit Lenk- und Ruhezeit</StatusText>
+			<Status>44</Status>
+			<StatusWerte />
+			<MapAttachments>false</MapAttachments>
+			<MapEtaData>true</MapEtaData>
+			<EtaAddDartCalculatedDelay>true</EtaAddDartCalculatedDelay>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1332</Form>
+			<StatusText>Daten zum Endgerät übertragen</StatusText>
+			<Status>22</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1346</Form>
+			<StatusText>Storno (Tour, Place oder Order) nicht verarbeitet</StatusText>
+			<Status>4</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1345</Form>
+			<StatusText>Storno (Tour, Place oder Order) nicht verarbeitet - Tour abgeschlossen</StatusText>
+			<Status>4</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1349</Form>
+			<StatusText>Daten auf dem Endgerät gelöscht</StatusText>
+			<Status>5</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1350</Form>
+			<StatusText>Zielstorno nicht verarbeitet - Ort nicht vorhanden</StatusText>
+			<Status>4</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1351</Form>
+			<StatusText>Zielstorno nicht verarbeitet - Anfahrt zum Zielort</StatusText>
+			<Status>4</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1371</Form>
+			<StatusText>Daten auf dem Endgerät nicht eingepflegt</StatusText>
+			<Status>4</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1370</Form>
+			<StatusText>Daten auf dem Endgerät eingepflegt</StatusText>
+			<Status>28</Status>
+			<DeliverDriverPin>false</DeliverDriverPin>
+			<DeliverDriverCardId>false</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1369</Form>
+			<StatusText>Tour wurde begonnen</StatusText>
+			<Status>11</Status>
+			<DeliverDriverPin>true</DeliverDriverPin>
+			<DeliverDriverCardId>true</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="TourstatusFormatter">
+			<Form>1368</Form>
+			<StatusText>Vorlaeufiges Tourende</StatusText>
+			<Status>14</Status>
+			<DeliverDriverPin>true</DeliverDriverPin>
+			<DeliverDriverCardId>true</DeliverDriverCardId>
+			<DeliverAttachedObjects>false</DeliverAttachedObjects>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="EreignisFormatter">
+			<Form>
+				<int>1687</int>
+			</Form>
+			<StatusText>Beginn-Pause</StatusText>
+			<Typ>1</Typ>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="EreignisFormatter">
+			<Form>
+				<int>1686</int>
+			</Form>
+			<StatusText>Beginn-Stau</StatusText>
+			<Typ>3</Typ>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="EreignisFormatter">
+			<Form>
+				<int>1684</int>
+			</Form>
+			<StatusText>Ende-Stau</StatusText>
+			<Typ>4</Typ>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="EreignisFormatter">
+			<Form>
+				<int>1661</int>
+				<int>1735</int>
+				<int>1808</int>
+			</Form>
+			<StatusText>Panne</StatusText>
+			<Typ>5</Typ>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="EreignisFormatter">
+			<Form>
+				<int>1720</int>
+			</Form>
+			<StatusText>Beginn Werkstattaufenthalt</StatusText>
+			<Typ>7</Typ>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="EreignisFormatter">
+			<Form>
+				<int>1721</int>
+			</Form>
+			<StatusText>Ende Werkstattaufenthalt</StatusText>
+			<Typ>8</Typ>
+		</AbstractFormatter>
+		<AbstractFormatter xsi:type="EreignisFormatter">
+			<Form>
+				<int>1613</int>
+				<int>1700</int>
+				<int>1737</int>
+				<int>1738</int>
+			</Form>
+			<StatusText>Tanken</StatusText>
+			<Typ>10</Typ>
+			<AdditionalMap>
+				<Key>CRD</Key>
+				<Typ>9</Typ>
+			</AdditionalMap>
+			<AdditionalMap>
+				<Key>A</Key>
+				<Typ>4</Typ>
+			</AdditionalMap>
+		</AbstractFormatter>
+	</MessageFormatters>
+</CisSpedionModelConverterContext>

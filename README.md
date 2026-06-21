@@ -1,12 +1,6 @@
 # transport_optimization
 Application Project Master Data Science HAW Kiel SoSe26
 
-## Dashboard aufrufen
-`pip install -r requirements.txt`
-
-`streamlit run app.py`
-
-
 # Notebook Übersicht:
 Hinweis: Falls die Notebooks nochmal ausgeführt werden müssen, sollten die Dateipfade der eingelesenen Dateien geändert werden, weil es jetzt einen `Daten` Ordner gibt. 
 
@@ -21,6 +15,7 @@ Standzeiten_Soll_Ist.ipynb: -Visualisierungen der Standzeiten
 
 #### Julia
 analyze_CIS.ipynb: -Erste Erschließung der CIS-Daten.xlsx (Soll-Daten)
+
 analyse_routenabweichung_stopabdeckung.ipynb: -Routenabweichung, Stoppabdeckung, Cleaning PRC und Tournummernzuordnung PRC
 
 tourenkarte_soll_emr_alle.ipynb: -Karte EMR vs. Soll, HTML Export war zu groß zum Hochladen 
